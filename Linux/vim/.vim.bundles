@@ -1,0 +1,65 @@
+"开始使用Vundle的必须配置
+set nocompatible
+filetype off
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+"使用Vundle来管理Vundle
+Bundle 'gmarik/vundle'
+
+"PowerLine插件 状态栏增强展示
+Bundle 'Lokaltog/vim-powerline'
+"安装NERD-tree
+Bundle 'The-NERD-tree'
+
+"Vundle配置必须 开启插件
+filetype plugin indent on
+
+"vim有一个状态栏 加上powline则有两个状态栏
+"设置powerline状态栏
+
+set laststatus=2
+set t_Co=256
+let g:Powline_symbols='fancy'
+set nocompatible
+set enc=utf-8
+let termencoding=&encoding
+set fileencodings=utf-8,gbk,ucs-bom,cp936
+set guifont=Ubuntu\ Mono\ for\ Powerline\ 12
+
+
+
+
+"设置NERDTree的选项
+let NERDTreeMinimalUI=1
+let NERDChristmasTree=1
+" Give a shortcut key to NERD Tree
+"map :NERDTreeToggle
+map <F3> :NERDTree  <CR>
+"nnoremap <F10> :exe 'NERDTreeToggle'<CR>
+"
+
+"安装主题
+Bundle "molokai"
+Bundle "solarized"
+
+" Color scheme
+colorscheme molokai
+""colorscheme solarized
+"highlight NonText guibg=#060606
+"highlight Folded  guibg=#0A0A0A guifg=#9090D0
+
+"设置行列线
+au WinLeave * set nocursorline
+"au WinLeave * set nocursorline nocursorcolumn
+au WinEnter * set cursorline
+"au WinEnter * set cursorline cursorcolumn
+set cursorline
+"set cursorcolumn
+
+"安装语法提示
+Bundle 'Valloric/YouCompleteMe'
+
+"auto-pairs supertab
+Bundle 'auto-pairs'
+Bundle 'supertab'
