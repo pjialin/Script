@@ -1,0 +1,7 @@
+[groups]
+web = UserName
+
+[ProjectName:/]
+@web = rw
+
+

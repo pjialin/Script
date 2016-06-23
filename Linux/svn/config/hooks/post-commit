@@ -1,0 +1,12 @@
+#!/bin/bash
+
+#set utf8
+export LANG=en_US.UTF-8
+
+#web dir 
+web_dir=WEBROOT`basename $1`
+#svn info
+svn_user=username
+svn_passwd=password
+
+svn up $web_dir --username $svn_user --password $svn_passwd
