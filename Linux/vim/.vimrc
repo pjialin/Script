@@ -89,8 +89,63 @@ filetype plugin on
 "启动智能补全
 filetype plugin indent on
 
+"-----------Setting----------"
+"The default leader is \, but a coma is much better.
+let mapleader = ','
+"Macvim-specific line-height.
+set linespace=15
+
+"-----------Search----------"
+set hlsearch   "exec nohlsearch to cenec search
+set incsearch  "searching
+
+"-----------Split--------"
+nmap <C-H> <C-W><C-H>
+nmap <C-J> <C-W><C-J>
+nmap <C-K> <C-W><C-K>
+nmap <C-L> <C-W><C-L>
+
+"-----------Mappings--------"
+"Make it easy to edit the Vimrc file.
+nmap <leader>ev :tabedit $MYVIMRC<cr>
+
+"Add simple highlight removal.
+nmap <leader><space> :nohlsearch<cr>
+
+"Make NERDTreeToggle
+nmap ƒ :NERDTreeToggle<cr>
+
+"Make jj to Esc
+imap jj <Esc>
+
+"Ctrlp
+"nmap <c-R> :CtrlPBufTag<cr>
+nmap <D-e> :CtrlPMRUFiles<cr>
+
+
+" 解决粘贴格式错乱
+set pastetoggle=<F9>
+
+
+"-------------Plugins--------------"
+""/
+"/ CtrlP
+""/
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
+""
+
+
+"-----------Auto-Commands-------"
+augroup Soureing
+    autocmd BufWritePost .vimrc source %
+augroup END
+
 
 "引入插件列表
 if filereadable(expand("~/.vimrc.bundles"))
     source ~/.vimrc.bundles
 endif
+
+
+
+map gd gd<C-o>
