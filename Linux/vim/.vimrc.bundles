@@ -10,7 +10,11 @@ Bundle 'gmarik/vundle'
 "PowerLine插件 状态栏增强展示
 Bundle 'Lokaltog/vim-powerline'
 "安装NERD-tree
-Bundle 'The-NERD-tree'
+"Bundle 'The-NERD-tree'
+Bundle 'scrooloose/nerdtree'
+
+"Ctrlp
+Bundle "ctrlpvim/ctrlp.vim"
 
 "Vundle配置必须 开启插件
 filetype plugin indent on
@@ -35,16 +39,18 @@ let NERDTreeMinimalUI=1
 let NERDChristmasTree=1
 " Give a shortcut key to NERD Tree
 "map :NERDTreeToggle
-map <F3> :NERDTree  <CR>
+"map <F3> :NERDTreeToggle  <CR>
 "nnoremap <F10> :exe 'NERDTreeToggle'<CR>
 "
 
 "安装主题
 Bundle "molokai"
 Bundle "solarized"
+Bundle "dracula/vim"
 
 " Color scheme
-colorscheme molokai
+" colorscheme molokai
+color dracula
 ""colorscheme solarized
 "highlight NonText guibg=#060606
 "highlight Folded  guibg=#0A0A0A guifg=#9090D0
